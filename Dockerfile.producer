@@ -1,0 +1,17 @@
+FROM node:alpine
+
+LABEL author="Gabriel Nascimento"
+LABEL email="gabsn.dev@gmail.com"
+LABEL description="Simple image in Nodejs to connect and produce data to Rabbitmq Instance"
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install --production
+
+EXPOSE 3333
+
+COPY dist .
+
+CMD npm run producer

@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "@types/amqplib": "^0.10.4",
+    "@types/express": "^4.17.21",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.2"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "producer": "node producer",
+    "consumer": "node consumer",
+    "dev:producer": "ts-node-dev src/producer",
+    "dev:consumer": "ts-node-dev src/consumer"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "express": "^4.18.2"
+  },
+  "name": "dknr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

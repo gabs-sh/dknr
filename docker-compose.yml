@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  consumer: 
+    container_name: consumer
+    image: gabsndev/consumer
+  
+  producer: 
+    container_name: producer
+    image: gabsndev/producer
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:management-3.12.9
